@@ -1,0 +1,26 @@
+// CREATE TABLES
+
+CREATE TABLE Employee(
+	e_id int PRIMARY KEY AUTO_INCREMENT, 
+	name varchar(200) NOT NULL,
+	username varchar(200) NOT NULL, 
+	password varchar(200) NOT NULL);
+
+CREATE TABLE Reimbursement(
+	r_id int PRIMARY KEY AUTO_INCREMENT, 
+	amount double(10,2),
+	status varchar(200),
+	note varchar(200),
+	e_id int,
+	constraint fk_REIMBUSEMENT_EMPLOYEE FOREIGN KEY ACCOUNT(e_id) REFERENCES Employee(e_id) 
+	);
+	
+
+
+
+
+
+
+// INSERT
+
+INSERT INTO Employee VALUES(0,'jay','jayun', 'jaypw');
